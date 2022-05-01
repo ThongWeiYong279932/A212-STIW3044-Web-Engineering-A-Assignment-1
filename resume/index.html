@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Resume</title>
+    <script>
+        function sideMenu() {
+            var x = document.getElementById("idsidebar");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+    <style>
+        table, th, td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w3-bar w3-grey">
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-center">Profile</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-center">Education</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-center">Experience</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-center">Skills</a>
+        <a href="javascript:void(0)" onclick="sideMenu()" class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-left">&#9776</a>
+    </div>
+
+    <div id="idsidebar" class="w3-bar-block w3-grey w3-hide w3-hide-large w3-hide-medium">
+        <a href="#" class="w3-bar-item w3-button w3-left">Profile></a>
+        <a href="#" class="w3-bar-item w3-button w3-left">Education></a>
+        <a href="#" class="w3-bar-item w3-button w3-left">Experience></a>
+        <a href="#" class="w3-bar-item w3-button w3-left">Skills</a>
+    </div>
+
+    <header class="w3-header w3-container w3-aqua w3-padding w3-center" style="width: 100%; height: 200px; background-image:url('Banner.png'); background-size: 100% 100%;">
+        <h1 style="line-height: 150px;">My Resume</h1>
+    </header>
+
+    <div id="profile" class="w3-container w3-row w3-blue w3-padding-32">
+        <div class="w3-container w3-third">
+            <img src="Gambar Pelajar.jpg" style="height:200px; width:200px; background-size: cover; border: 5px solid aqua;">
+        </div>
+        <div class="w3-container w3-twothird">
+            <p>Name: Thong Wei Yong</p>
+            <p>University Utara Malaysia(UUM) Bachelor of Science Information Technology student.</p>
+            <p>Current Semester: 4</p>
+            <p>Year of Enrollment: 2020 October</p>
+        </div>
+    </div>
+
+    <div id="education" class="w3-container w3-row w3-aqua w3-padding-32">
+        <div class="w3-container w3-twothird">
+            <ul>
+                <li><b>STPM:</b><br>2018-2019<br>Sekolah Menengah Kebangsaan Proton City Tanjong Malim</li>
+                <p></p>
+                <li><b>SPM:</b><br>2013-2017<br>Sekolah Menengah Jenis Kebangsaan Katholik Tanjong Malim</li>
+            </ul>
+        </div>
+        <div class="w3-container w3-third">
+            <img class="mySlides" src="Logo SMKPC.jfif" style="height:200px; width:200px; background-size: cover; border: 5px solid blue;">
+            <img class="mySlides" src="Logo SMJK Katholik TM.jpg" style="height:200px; width:200px; background-size: cover; border: 5px solid blue;">
+        </div>
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                for (i = 0; myIndex > x.length; i++){
+                    myIndex = 1;
+                }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 2000); /*change every 2 seconds*/
+            }
+        </script>
+    </div>
+    
+    <div id="experience" class="w3-container w3-row w3-blue w3-padding-32">
+        <div class="w3-container w3-third">
+            <i class="fa fa-tasks w3-padding" style="font-size: 128px"></i>
+        </div>
+        <div class="w3-container w3-twothird">
+            <p>Working as a croupier in Genting Highland Casino.</p>
+        </div>
+    </div>
+
+    <div id="skill" class="w3-container w3-row w3-aqua w3-padding-32">
+        <div class="w3-container w3-twothird" >
+            <table>
+                <tr>
+                    <th>Skills</th>
+                    <th>Mastery</th>
+                </tr>
+                <tr>
+                    <td>IT Field Skills</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Java Programming Language</td>
+                    <td>Moderate</td>
+                </tr>
+                <tr>
+                    <td>SQL</td>
+                    <td>Moderate</td>
+                </tr>
+                <tr>
+                    <td>Web Programming</td>
+                    <td>Beginner</td>
+                </tr>
+                <tr>
+                    <td>Language</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>Moderate</td>
+                </tr>
+                <tr>
+                    <td>Bahasa Melayu</td>
+                    <td>Moderate</td>
+                </tr>
+                <tr>
+                    <td>Chinese</td>
+                    <td>Moderate</td>
+                </tr>
+            </table>
+        </div>
+        <div class="w3-container w3-third">
+            <i class="fa fa-laptop w3-padding" style="font-size: 128px"></i>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Prepared By: Thong Wei Yong</p>
+    </footer>
+
+</body>
+</html>
